@@ -1,15 +1,16 @@
-const API_BASE_URL = 'http://localhost:4000/api/users';
+const API_BASE_URL =
+  "https://user-management-dashboard-eh6v.onrender.com/api/users";
 
 const handleResponse = async (response) => {
   if (!response.ok) {
     const error = await response.text();
     throw new Error(error || `HTTP error! status: ${response.status}`);
   }
-  
+
   if (response.status === 204) {
     return null;
   }
-  
+
   return response.json();
 };
 
@@ -26,9 +27,9 @@ export const userService = {
 
   createUser: async (userData) => {
     const response = await fetch(API_BASE_URL, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(userData),
     });
@@ -37,9 +38,9 @@ export const userService = {
 
   updateUser: async (id, userData) => {
     const response = await fetch(`${API_BASE_URL}/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(userData),
     });
@@ -48,7 +49,7 @@ export const userService = {
 
   deleteUser: async (id) => {
     const response = await fetch(`${API_BASE_URL}/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
     return handleResponse(response);
   },

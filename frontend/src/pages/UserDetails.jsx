@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  User, 
-  Mail, 
-  Phone, 
-  Building, 
-  MapPin, 
+import {
+  ArrowLeft,
+  User,
+  Mail,
+  Phone,
+  Building,
+  MapPin,
   Globe,
   Edit2,
   Trash2,
@@ -105,7 +105,7 @@ const UserDetails = () => {
             </div>
             <div className="flex space-x-3">
               <button
-                onClick={() => alert('Edit functionality would be implemented here')}
+                onClick={() => alert('Need to implement!!!')}
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
                 <Edit2 className="h-4 w-4 mr-2" />
@@ -188,7 +188,7 @@ const UserDetails = () => {
                 <MapPin className="h-5 w-5 mr-2 text-red-500" />
                 Address Information
               </h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-md font-medium text-gray-900 mb-4">Location Details</h4>
